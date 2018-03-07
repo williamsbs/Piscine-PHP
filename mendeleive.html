@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mendeleive</title>
+	<style>
+		body
+		{
+			text-align: center;
+			font-family: "Arial"
+		}
+		table, th, td
+		{
+			/* border: 1px solid black;
+			border-collapse: collapse; */
+			 min-width:80px
+		}
+		.element_num
+		{
+			text-align:left;
+		}
+		.atomique_mass
+		{
+			text-align:right;
+		}
+		.symbole_gas
+		{
+			color:#E74C3C;
+		}
+		.symbole_liquide
+		{
+			color:#2493FB;
+		}
+		.symbole_inconnue
+		{
+			color:#566573 ;
+		}
+		.non-metaux
+		{
+			background-color: #d7f872;
+		}
+		.metaux-alcalins
+		{
+			background-color: #f24a4e;
+		}
+		.metaux-alcali-no-terreux
+		{
+			background-color: #f3ce93;
+		}
+		.metaux-de-transition
+		{
+			background-color: #f2a9aa;
+		}
+		.metalloides
+		{
+			background-color: #b9bb7f;
+		}
+		.post-transition-metals
+		{
+			background-color: #b8b8b8;
+		}
+		.Halogens
+		{
+			background-color: #FF33A5;
+		}
+		.gaz-noble
+		{
+			background-color: #abf4f3;
+		}
+		.indetermine
+		{
+			background-color: #d7d7d7;
+		}
+		.Lanthanides
+		{
+			background-color: #f2a3f4;
+		}
+		.Actinite
+		{
+			background-color: #f27ab9;
+		}
+	</style>
+</head>
+<body style="background-image:url(ressources/black2.JPG)">
+	<h1  style=color:#808B96;font-size:50px>Tableau Périodique Des Éléments</h1>
+	<div>
+		<img src="ressources/picture.JPG">
+	</div>
+	<table style="width:100%" contenteditable="true">
+		<tr>
+			<td class="non-metaux"><p class="atomique_mass">1.008</p><h2 class="symbole_gas">H</h2><p>Hydrogène</p><p class="element_num">1</td>
+			<td colspan="16"></td>
+			<td class="gaz-noble"><p class="atomique_mass">4.0026</p><h2 class="symbole_gas">He</h2><p>Helium</p><p class="element_num">2</p></td>
+		</tr>
+		<tr>
+			<td class="metaux-alcalins"><p class="atomique_mass">6.94</p><h2 class="symbole_solid">Li</h2><p>Lithium</p><p class="element_num">3</p></td>
+			<td class="metaux-alcali-no-terreux"><p class="atomique_mass">9.0122</p><h2 class="symbole_solid">Be</h2><p>Bérylium</p><p class="element_num">4</p></td>
+			<td colspan="10"></td>
+			<td class="metalloides"><p class="atomique_mass">10.81</p><h2 class="symbole_solid">B</h2><p>Bore</p><p class="element_num">5</p></td>
+			<td class="non-metaux"><p class="atomique_mass">12.011</p><h2 class="symbole_solid">C</h2><p>Carbone</p><p class="element_num">6</p></td>
+			<td class="non-metaux"><p class="atomique_mass">14.007</p><h2 class="symbole_gas">N</h2><p>Azote</p><p class="element_num">7</p></td>
+			<td class="non-metaux"><p class="atomique_mass">15.999</p><h2 class="symbole_gas">O</h2><p>Oxygène</p><p class="element_num">8</p></td>
+			<td class="non-metaux"><p class="atomique_mass">18.998</p><h2 class="symbole_gas">F</h2><p>Fluor</p><p class="element_num">9</p></td>
+			<td class="gaz-noble"><p class="atomique_mass">20.180</p><h2 class="symbole_gas">Ne</h2><p>Néon</p><p class="element_num">10</p></td>
+		</tr>
+		<tr>
+			<td class="metaux-alcalins"><p class="atomique_mass">22.990</p><h2 class="symbole_solid">Na</h2><p>Soduim</p><p class="element_num">11</p></td>
+			<td class="metaux-alcali-no-terreux"><p class="atomique_mass">24.305</p><h2 class="symbole_solid">Mg</h2><p>Mangnésium</p><p class="element_num">12</p></td>
+			<td colspan="10"></td>
+			<td class="post-transition-metals"><p class="atomique_mass">26.982</p><h2 class="symbole_solid">Al</h2><p>Aluminium</p><p class="element_num">13</p></td>
+			<td class="metalloides"><p class="atomique_mass">28.085</p><h2 class="symbole_solid">Si</h2><p>Silicium</p><p class="element_num">14</p></td>
+			<td class="non-metaux"><p class="atomique_mass">30.974</p><h2 class="symbole_solid">P</h2><p>Phosphore</p><p class="element_num">15</p></td>
+			<td class="non-metaux"><p class="atomique_mass">32.06</p><h2 class="symbole_solid">S</h2><p>Souffre</p><p class="element_num">16</p></td>
+			<td class="non-metaux"><p class="atomique_mass">35.45</p><h2 class="symbole_gas">Cl</h2><p>Chlore</p><p class="element_num">17</p></td>
+			<td class="gaz-noble"><p class="atomique_mass">39.948</p><h2 class="symbole_gas">Ar</h2><p>Argon</p><p class="element_num">18</p></td>
+		</tr>
+		<tr>
+			<td class="metaux-alcalins"><p class="atomique_mass">39.098</p><h2 class="symbole_solid">K</h2><p>Potassuim</p><p class="element_num">19</p></td>
+			<td class="metaux-alcali-no-terreux"><p class="atomique_mass">40.078</p><h2 class="symbole_solid">Ca</h2><p>Calcium</p><p class="element_num">20</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">44.956</p><h2 class="symbole_solid">Sc</h2><p>Scanduim</p><p class="element_num">21</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">47.867</p><h2 class="symbole_solid">Ti</h2><p>Titane</p><p class="element_num">22</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">50.942</p><h2 class="symbole_solid">V</h2><p>Vanadium</p><p class="element_num">23</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">51.996</p><h2 class="symbole_solid">Cr</h2><p>Chrome</p><p class="element_num">24</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">54.938</p><h2 class="symbole_solid">Mn</h2><p>Manganése</p><p class="element_num">25</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">55.845</p><h2 class="symbole_solid">Fe</h2><p>Fer</p><p class="element_num">26</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">58.933</p><h2 class="symbole_solid">Co</h2><p>Cobalt</p><p class="element_num">27</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">58.693</p><h2 class="symbole_solid">Ni</h2><p>Nickel</p><p class="element_num">28</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">63.546</p><h2 class="symbole_solid">Cu</h2><p>Cuivre</p><p class="element_num">29</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">65.38</p><h2 class="symbole_solid">Zn</h2><p>Zinc</p><p class="element_num">30</p></td>
+			<td class="post-transition-metals"><p class="atomique_mass">69.723</p><h2 class="symbole_solid">Ga</h2><p>Gallium</p><p class="element_num">31</p></td>
+			<td class="metalloides"><p class="atomique_mass">72.630</p><h2 class="symbole_solid">Ge</h2><p>Germannium</p><p class="element_num">32</p></td>
+			<td class="metalloides"><p class="atomique_mass">74.922</p><h2 class="symbole_solid">As</h2><p>Arsenic</p><p class="element_num">33</p></td>
+			<td class="non-metaux"><p class="atomique_mass">78.971</p><h2 class="symbole_solid">Se</h2><p>Selenium</p><p class="element_num">34</p></td>
+			<td class="non-metaux"><p class="atomique_mass">79.904</p><h2 class="symbole_liquide">Br</h2><p>Brome</p><p class="element_num">35</p></td>
+			<td class="gaz-noble"><p class="atomique_mass">83.798</p><h2 class="symbole_gas">Kr</h2><p>Krypton</p><p class="element_num">36</p></td>
+		</tr>
+		<tr>
+			<td class="metaux-alcalins"><p class="atomique_mass">85.468</p><h2 class="symbole_solid">Rb</h2><p>rubiduim</p><p class="element_num">37</p></td>
+			<td class="metaux-alcali-no-terreux"><p class="atomique_mass">87.62</p><h2 class="symbole_solid">Sr</h2><p>Strontium</p><p class="element_num">38</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">88.906</p><h2 class="symbole_solid">Y</h2><p>Yttrium</p><p class="element_num">39</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">91.224</p><h2 class="symbole_solid">Zr</h2><p>Zirconnium</p><p class="element_num">40</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">92.906</p><h2 class="symbole_solid">Nb</h2><p>Niobium</p><p class="element_num">41</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">95.95</p><h2 class="symbole_solid">Mo</h2><p>Molybdene</p><p class="element_num">42</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">(98)</p><h2 class="symbole_solid">Tc</h2><p>Technetium</p><p class="element_num">43</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">101.07</p><h2 class="symbole_solid">Ru</h2><p>Ruthenium</p><p class="element_num">44</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">102.91</p><h2 class="symbole_solid">Rh</h2><p>Rhodium</p><p class="element_num">45</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">106.42</p><h2 class="symbole_solid">Pd</h2><p>Palladium</p><p class="element_num">46</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">107.87</p><h2 class="symbole_solid">Ag</h2><p>Argent</p><p class="element_num">47</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">112.41</p><h2 class="symbole_solid">Cd</h2><p>Cadmium</p><p class="element_num">48</p></td>
+			<td class="post-transition-metals"><p class="atomique_mass">114.82</p><h2 class="symbole_solid">In</h2><p>Indium</p><p class="element_num">49</p></td>
+			<td class="post-transition-metals"><p class="atomique_mass">118.71</p><h2 class="symbole_solid">Sn</h2><p>Etain</p><p class="element_num">50</p></td>
+			<td class="metalloides"><p class="atomique_mass">121.76</p><h2 class="symbole_solid">Sb</h2><p>Antimoine</p><p class="element_num">51</p></td>
+			<td class="metalloides"><p class="atomique_mass">127.60</p><h2 class="symbole_solid">Te</h2><p>Tellure</p><p class="element_num">52</p></td>
+			<td class="non-metaux"><p class="atomique_mass">126.90</p><h2 class="symbole_solid">I</h2><p>Iode</p><p class="element_num">53</p></td>
+			<td class="gaz-noble"><p class="atomique_mass">131.29</p><h2 class="symbole_gas">Xe</h2><p>Xenon</p><p class="element_num">54</p></td>
+		</tr><td class="metaux-alcalins"><p class="atomique_mass">132.91</p><h2 class="symbole_solid">Cs</h2><p>Cesilum</p><p class="element_num">55</p></td>
+			<td class="metaux-alcali-no-terreux"><p class="atomique_mass">137.33</p><h2 class="symbole_solid">Ba</h2><p>Baryum</p><p class="element_num">56</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">174.97</p><h2 class="symbole_solid">Lu</h2><p>Lutécium</p><p class="element_num">71</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">178.49</p><h2 class="symbole_solid">Hf</h2><p>Hafnium</p><p class="element_num">72</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">180.95</p><h2 class="symbole_solid">Ta</h2><p>Tantale</p><p class="element_num">73</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">183.84</p><h2 class="symbole_solid">W</h2><p>Tungstene</p><p class="element_num">74</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">186.21</p><h2 class="symbole_solid">Re</h2><p>Rhenium</p><p class="element_num">75</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">190.23</p><h2 class="symbole_solid">Os</h2><p>Osmium</p><p class="element_num">76</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">192.22</p><h2 class="symbole_solid">Ir</h2><p>Iridium</p><p class="element_num">77</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">195.08</p><h2 class="symbole_solid">Pt</h2><p>Platine</p><p class="element_num">78</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">196.97</p><h2 class="symbole_solid">Au</h2><p>Or</p><p class="element_num">79</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">200.59</p><h2 class="symbole_liquide">Hg</h2><p>Mercure</p><p class="element_num">80</p></td>
+			<td class="post-transition-metals"><p class="atomique_mass">204.38</p><h2 class="symbole_solide">Ti</h2><p>Thallium</p><p class="element_num">81</p></td>
+			<td class="post-transition-metals"><p class="atomique_mass">207.2</p><h2 class="symbole_solide">Pb</h2><p>Plomb</p><p class="element_num">82</p></td>
+			<td class="post-transition-metals"><p class="atomique_mass">208.98</p><h2 class="symbole_solide">Bi</h2><p>Bismuth</p><p class="element_num">83</p></td>
+			<td class="post-transition-metals"><p class="atomique_mass">(209)</p><h2 class="symbole_solide">Po</h2><p>Polonium</p><p class="element_num">84</p></td>
+			<td class="metalloides"><p class="atomique_mass">(210)</p><h2 class="symbole_solide">At</h2><p>Astate</p><p class="element_num">85</p></td>
+			<td class="gaz-noble"><p class="atomique_mass">(222)</p><h2 class="symbole_gas">Rn</h2><p>Astate</p><p class="element_num">85</p></td>
+		</tr>
+		<tr>
+			<td class="metaux-alcalins"><p class="atomique_mass">(223)</p><h2 class="symbole_solide">Fr</h2><p>Francium</p><p class="element_num">87</p></td>
+			<td class="metaux-alcali-no-terreux"><p class="atomique_mass">(226)</p><h2 class="symbole_solide">Ra</h2><p>Radium</p><p class="element_num">88</p></td>
+			<td class="Actinite"><p class="atomique_mass">(262)</p><h2 class="symbole_solide">Lr</h2><p>Lawrencium</p><p class="element_num">103</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">(267)</p><h2 class="symbole_inconnue">Rf</h2><p>Rutherfordium</p><p class="element_num">104</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">(268)</p><h2 class="symbole_inconnue">Db</h2><p>Dubnium</p><p class="element_num">105</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">(269)</p><h2 class="symbole_inconnue">Sg</h2><p>Seaborgium</p><p class="element_num">106</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">(270)</p><h2 class="symbole_inconnue">Bh</h2><p>Bohrium</p><p class="element_num">107</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">(277)</p><h2 class="symbole_inconnue">Hs</h2><p>Hassium</p><p class="element_num">109</p></td>
+			<td class="indetermine"><p class="atomique_mass">(278)</p><h2 class="symbole_inconnue">Mt</h2><p>Meitnerium</p><p class="element_num">105</p></td>
+			<td class="indetermine"><p class="atomique_mass">(281)</p><h2 class="symbole_inconnue">Ds</h2><p>Darmstadtium</p><p class="element_num">110</p></td>
+			<td class="indetermine"><p class="atomique_mass">(282)</p><h2 class="symbole_inconnue">Rg</h2><p>Roentgenium</p><p class="element_num">111</p></td>
+			<td class="metaux-de-transition"><p class="atomique_mass">(285)</p><h2 class="symbole_inconnue">Cn</h2><p>copernicium</p><p class="element_num">112</p></td>
+			<td class="indetermine"><p class="atomique_mass">(286)</p><h2 class="symbole_inconnue">Nh</h2><p>Nihonium</p><p class="element_num">113</p></td>
+			<td class="indetermine"><p class="atomique_mass">(289)</p><h2 class="symbole_inconnue">Fl</h2><p>Fleroium</p><p class="element_num">114</p></td>
+			<td class="indetermine"><p class="atomique_mass">(290)</p><h2 class="symbole_inconnue">Mc</h2><p>Moscovium</p><p class="element_num">113</p></td>
+			<td class="indetermine"><p class="atomique_mass">(293)</p><h2 class="symbole_inconnue">Lv</h2><p>Livermorium</p><p class="element_num">116</p></td>
+			<td class="indetermine"><p class="atomique_mass">(294)</p><h2 class="symbole_inconnue">Ts</h2><p>Tennessine</p><p class="element_num">117</p></td>
+			<td class="indetermine"><p class="atomique_mass">(294)</p><h2 class="symbole_inconnue">Og</h2><p>Oganesson</p><p class="element_num">118</p></td>
+		<tr>
+			<td><br /></td>
+		</tr>
+		<tr>
+			<td colspan="2"></td>
+			<td class="Lanthanides"><p class="atomique_mass">138.91</p><h2 class="symbole_solid">La</h2><p>Lanthane</p><p class="element_num">57</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">140.12</p><h2 class="symbole_solid">Ce</h2><p>Cérium</p><p class="element_num">58</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">140.91</p><h2 class="symbole_solid">Pr</h2><p>Praséodyme</p><p class="element_num">59</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">144.24</p><h2 class="symbole_solid">Nd</h2><p>Néodyme</p><p class="element_num">60</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">(145)</p><h2 class="symbole_solid">Pm</h2><p>Prométhium</p><p class="element_num">61</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">150.36</p><h2 class="symbole_solid">Sm</h2><p>Samarium</p><p class="element_num">62</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">151.96</p><h2 class="symbole_solid">Eu</h2><p>Europium</p><p class="element_num">63</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">157.25</p><h2 class="symbole_solid">Gd</h2><p>Gadolimium</p><p class="element_num">64</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">158.93</p><h2 class="symbole_solid">Tb</h2><p>Terbium</p><p class="element_num">65</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">162.50</p><h2 class="symbole_solid">Dy</h2><p>Dysprosium</p><p class="element_num">66</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">164.93</p><h2 class="symbole_solid">Ho</h2><p>Holmium</p><p class="element_num">67</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">167.26</p><h2 class="symbole_solid">Er</h2><p>Erbium</p><p class="element_num">68</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">168.93</p><h2 class="symbole_solid">Tm</h2><p>Thulium</p><p class="element_num">69</p></td>
+			<td class="Lanthanides"><p class="atomique_mass">173.05</p><h2 class="symbole_solid">Yb</h2><p>Ytterbium</p><p class="element_num">70</p></td>
+		</tr>
+		<tr>
+			<td colspan="2"></td>
+			<td class="Actinite"><p class="atomique_mass">(227)</p><h2 class="symbole_solide">Ac</h2><p>Actinium</p><p class="element_num">89</p></td>
+			<td class="Actinite"><p class="atomique_mass">232.04</p><h2 class="symbole_solide">Th</h2><p>Thorium</p><p class="element_num">90</p></td>
+			<td class="Actinite"><p class="atomique_mass">231.04</p><h2 class="symbole_solide">Pa</h2><p>Protactinium</p><p class="element_num">91</p></td>
+			<td class="Actinite"><p class="atomique_mass">238.03</p><h2 class="symbole_solide">U</h2><p>Uranium</p><p class="element_num">92</p></td>
+			<td class="Actinite"><p class="atomique_mass">(237)</p><h2 class="symbole_solide">Np</h2><p>Neptunium</p><p class="element_num">93</p></td>
+			<td class="Actinite"><p class="atomique_mass">(244)</p><h2 class="symbole_solide">Pu</h2><p>Plutonium</p><p class="element_num">94</p></td>
+			<td class="Actinite"><p class="atomique_mass">(243)</p><h2 class="symbole_solide">Am</h2><p>Américium</p><p class="element_num">95</p></td>
+			<td class="Actinite"><p class="atomique_mass">(247)</p><h2 class="symbole_solide">Cm</h2><p>Curium</p><p class="element_num">96</p></td>
+			<td class="Actinite"><p class="atomique_mass">(247)</p><h2 class="symbole_solide">Bk</h2><p>Berkélium</p><p class="element_num">97</p></td>
+			<td class="Actinite"><p class="atomique_mass">(251)</p><h2 class="symbole_solide">Cf</h2><p>Californium</p><p class="element_num">98</p></td>
+			<td class="Actinite"><p class="atomique_mass">(252)</p><h2 class="symbole_solide">Es</h2><p>Einsteinium</p><p class="element_num">99</p></td>
+			<td class="Actinite"><p class="atomique_mass">(257)</p><h2 class="symbole_solide">Fm</h2><p>Fermium</p><p class="element_num">100</p></td>
+			<td class="Actinite"><p class="atomique_mass">(258)</p><h2 class="symbole_solide">Md</h2><p>Mendélévium</p><p class="element_num">101</p></td>
+			<td class="Actinite"><p class="atomique_mass">(259)</p><h2 class="symbole_solide">No</h2><p>Nobélium</p><p class="element_num">102</p></td>
+		</tr>
+
+</body>
+</html>
