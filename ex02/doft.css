@@ -1,8 +1,73 @@
 body
 {
 	background-color:#505050;
+	background-image: url(file:///Users/williamsabates/Desktop/Capture%20d%E2%80%99e%CC%81cran%202018-03-08%20a%CC%80%2000.09.26.png);
+background-size: cover;
 }
-h1
+.page
 {
-	color:red;
+	margin: 0 auto;
+	width: 1312px;
+	    opacity: 0.5;
+}
+.top_header
+{
+	border-radius: 9px;
+  box-shadow: 10px 10px 10px #000000;
+    background-color: #909090;
+    width: 100%;
+    height: 128px;
+    position: relative;
+    top: 8px;
+	}
+	.logo {
+	    position: absolute;
+	    top: 9px;
+	    width: 396px;
+	    left: 9px;
+	}
+	.loupe {
+	    position: absolute;
+	    top: 10px;
+	    right: 24px;
+	    width: 237px;
+	}
+	.reload {
+	    position: absolute;
+	    right: 7px;
+	    width: 20px;
+	    top: 10px;
+	}
+	.close {
+	    position: absolute;
+	    right: 6px;
+	    width: 20px;
+	    top: 99px;
+	}
+.block_img
+{
+	position: relative;
+    top: 15px;
+    left: 5px;
+}
+.oeil
+{
+	border: 5px solid red;
+	border-radius: 5px;
+}
+.left_bar {
+    margin: 25px 0 0 30px;
+    height: 394px;
+    width: 129px;
+    /* float: left; */
+    border-radius: 9px;
+    box-shadow: 10px 10px 10px #000000;
+    background-color: #909090;
+}
+.left_bar img
+{
+	width: 60px;
+	position: relative;
+  left: 20px;
+	margin-bottom: 6px;
 }
