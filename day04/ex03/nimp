@@ -1,0 +1,30 @@
+$condition = "NOTHING";
+$unserialised = unserialize(file_get_contents("../private/passwd"));
+foreach($unserialised as $elem)
+{
+	if($elem["login"] == $_POST["login"] && $elem["passwd"] == $passwd)
+	{
+		$condition = "SAME";
+	}
+}
+foreach($unserialised as $elem)
+{
+	if($elem["login"] != $_POST["login"])
+	{
+		$condition = "CHANGED";
+	}
+}
+if ($condition == "CHANGED")
+{
+	$unserialised[] =array("login" => $_POST["login"], "passwd" => $passwd);
+	$new_serialized = serialize($unserialised);
+	file_put_contents("../private/passwd", $new_serialized);
+	echo "OK";
+	$condition = "NOTHING";
+	print_r ($unserialised);
+
+}
+if ($condition == "SAME")
+{
+	echo "ERROR\n";
+}
