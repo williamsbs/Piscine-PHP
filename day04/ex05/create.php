@@ -11,7 +11,7 @@ if ($_POST["login"] != "" && $_POST["passwd"] != "" && $_POST["submit"] == "OK")
 		$tab = array(array("login" => $_POST["login"], "passwd" => $passwd));
 		$serialised = serialize($tab);
 		file_put_contents("../private/passwd", $serialised);
-		// header("Location: index.html");
+		header("Location: index.html");
 		// echo "OK";
 	}
 	else
@@ -30,7 +30,7 @@ if ($_POST["login"] != "" && $_POST["passwd"] != "" && $_POST["submit"] == "OK")
 			$unserialised[] = array("login" => $_POST["login"], "passwd" => $passwd);
 			$new_serialized = serialize($unserialised);
 			file_put_contents("../private/passwd", $new_serialized);
-			// header("Location: index.html");
+			header("Location: index.html");
 			// echo "OK";
 		}
 		else

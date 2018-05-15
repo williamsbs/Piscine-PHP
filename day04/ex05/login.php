@@ -2,11 +2,9 @@
 session_start();
 include ('auth.php');
 
-if (auth($_GET["login"], $_GET["passwd"]) == TRUE)
+if (auth($_POST["login"], $_POST["passwd"]) == TRUE)
 {
-	$_SESSION['loggued_on_user'] = $_GET['login'];
-	echo $_SESSION["loggued_on_user"];
-
+	$_SESSION['loggued_on_user'] = $_POST['login'];
 ?>
 <html>
 	<head>
@@ -16,6 +14,7 @@ if (auth($_GET["login"], $_GET["passwd"]) == TRUE)
 	<body>
 		<iframe name="chat" src="chat.php" width="100%" height="550px"></iframe>
 		<iframe name="speak" src="speak.php" width="100%" height="50px"></iframe>
+		<a href="logout.php">Logout</a>
 	</body>
 </html
 <?php

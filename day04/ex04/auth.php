@@ -1,9 +1,6 @@
 <?php
-echo oui;
-
 function auth($login, $passwd)
 {
-	echo oui;
    $mdp = hash(sha512, $passwd);
    $content = unserialize(file_get_contents("../private/passwd"));
    foreach($content as $elem)
@@ -12,10 +9,7 @@ function auth($login, $passwd)
 	   {
 		   return (TRUE);
 	   }
-	   else
-	   {
-		   return (FALSE);
-	   }
    }
+   return (FALSE);
 }
 ?>

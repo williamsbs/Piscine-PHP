@@ -9,10 +9,7 @@ function auth($login, $passwd)
 	   {
 		   return (TRUE);
 	   }
-	   else
-	   {
-		   return (FALSE);
-	   }
    }
+   return (FALSE);
 }
 ?>
