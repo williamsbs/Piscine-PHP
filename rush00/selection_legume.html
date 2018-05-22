@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boutique</title>
+    <link rel="stylesheet" href="selection.css">
+  </head>
+  <body>
+    <nav>
+      <label for="menu-deroulant" class="menu-deroulant">Menu</label>
+      <input type="checkbox" id="menu-deroulant" role="button">
+      <ul>
+        <li class="home"><a href="index.html">Boutique</a></li>
+        <li class="menu-legume"><a href="legume.html">Legume</a>
+          <ul class="sous-menu">
+            <li><a href="selection_legume.html">Courgette</a></li>
+            <li><a href="selection_legume.html">Salade</a></li>
+            <li><a href="selection_legume.html">Pomme de terre</a></li>
+            <li><a href="selection_legume.html">Maïs</a></li>
+          </ul></li>
+        <li class="menu-fruit"><a href="fruit.html">Fruit</a>
+          <ul class="sous-menu">
+            <li><a href="#">Banane</a></li>
+            <li><a href="#">Fraise</a></li>
+            <li><a href="#">Pomme</a></li>
+            <li><a href="#">Orange</a></li>
+          </ul></li>
+        <li class="menu-viande"><a href="viande.html">Viande</a>
+          <ul class="sous-menu">
+            <li><a href="#">Boeuf</a></li>
+            <li><a href="#">Poulet</a></li>
+            <li><a href="#">Poisson</a></li>
+          </ul></li>
+        <li class="menu-lait"><a href="Lait.html">Produit laitier</a>
+          <ul class="sous-menu">
+            <li><a href="#">Lait</a></li>
+            <li><a href="#">Fromage</a></li>
+            <li><a href="#">Yaourt</a></li>
+          </ul></li>
+        <li class="compte"><a href="login.html">Compte</a>
+          <ul class="sous-menu">
+            <li><a href="#">Cree un compte</a></li>
+            <li><a href="#">Se connecter</a></li>
+            <li><a href="#">Deconnection</a></li>
+          </ul></li>
+        <li class="panier"><a href="panier.html">Panier</a>
+          <ul class="sous-menu">
+            <li><a href="#">Visualiser le panier</a></li>
+            <li><a href="#">passer la commande</a></li>
+            <li><a href="#">supprimer le panier</a></li>
+          </ul></li>
+      </ul>
+    </nav></br>
+    <img class="courgette" title="courgette" src="https://www.marshalls-seeds.co.uk/images/products/product_2323_large.jpg" alt="image_courgette" >
+    <p class="description">La courgette est une plante herbacée de la famille des Cucurbitaceae,</br> c'est aussi le fruit comestible de cette plante. La courgette est un légume courant en été, la fleur de courgette est aussi utilisée en cuisine.</p>
+    <form method="POST" action="panier.php">
+      <input type="submit" name="add" value="Ajouter">
+    </form>
+    <hr/></br>
+    <img class="salade" title="salade" src="https://jardinage.lemonde.fr/images/dossiers/2017-07/batavia-153406.jpg" alt="image_salade" >
+    <p class="description">La laitue, laitue cultivée ou salade est une plante herbacée appartenant au genre Lactuca, de la famille des Astéracées, largement cultivée pour ses feuilles tendres consommées comme légume, généralement crues en salade.</p>
+    <form method="POST" action="panier.php">
+      <input type="submit" name="add" value="Ajouter">
+    </form>
+    <hr/></br>
+    <img class="patate" title="patate" src="http://lavieagricole.ca/media/image_article/patates.jpg" alt="image_patate" >
+    <p class="description">La pomme de terre, ou patate, est un tubercule comestible produit par l’espèce Solanum tuberosum, appartenant à la famille des solanacées.</p>
+    <form method="POST" action="panier.php">
+      <input type="submit" name="add" value="Ajouter">
+    </form>
+    <hr/></br>
+    <img class="mais" title="mais" src="https://fr.cdn.v5.futura-sciences.com/buildsv6/images/largeoriginal/2/c/e/2ce0f12e9f_91255_mais.jpg" alt="image_mais">
+    <p class="description">Le maïs, appelé blé d’Inde au Canada, est une plante herbacée tropicale annuelle de la famille des Poacées, largement cultivée comme céréale pour ses grains riches en amidon, mais aussi comme plante fourragère.</p>
+    <form method="POST" action="panier.php">
+      <input type="submit" name="add" value="Ajouter">
+    </form>
+    <hr/></br>
+  </body>
+</html>

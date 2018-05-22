@@ -1,0 +1,226 @@
+body
+{
+  font-family: "Arial";
+  margin: 0px;
+  padding: 0px;
+}
+
+nav
+{
+  width: 100%;
+  background-color: #424558;
+}
+
+nav > ul /* Le ">" veut dire que l'on s'adresse a tout les enfant 'ul' du parent 'nav' */
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+nav > ul::after /* pour compenser le float qu'il y a sur le "li" sinon ca fait de la merde*/
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav > ul > li
+{
+  float: left;
+  position: relative;
+}
+
+nav > ul > li > a
+{
+  font-size: 20px;
+  padding: 20px 50px;
+  color: #ffffff;
+}
+
+nav > ul > li:hover a
+{
+    padding: 15px 50px 20px 50px;
+}
+
+nav li
+{
+  list-style-type: none;
+}
+
+.sous-menu
+{
+  display: none;
+}
+
+nav a
+{
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+nav li:hover .sous-menu
+{
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 1000;
+}
+
+.sous-menu li
+{
+  border-bottom: 1px solid #CCC;
+}
+
+.sous-menu li a
+{
+  padding: 15px 30px;
+  font-size: 13px;
+  color: #222538;
+  width: 270px;
+}
+
+.panier:hover
+{
+  border-top: 5px solid #CCC;
+  background-color: RGBa(050, 070, 070, 0.15);
+}
+
+.compte:hover
+{
+  border-top: 5px solid #CCC;
+  background-color: RGBa(050, 050, 050, 0.15);
+}
+.menu-legume:hover
+{
+  border-top: 5px solid #1FA055;
+  background-color: RGBa(000, 192, 38, 0.15);
+}
+
+.menu-fruit:hover
+{
+  border-top: 5px solid #ffc04c;
+  background-color: RGBa(255, 165, 000, 0.15);
+}
+
+.menu-viande:hover
+{
+  border-top: 5px solid #e44d26;
+  background-color: RGBa(241, 77, 79, 0.15);
+}
+
+.menu-lait:hover
+{
+  border-top: 5px solid #FFFCCC;
+  background-color: RGBa(255, 252, 204, 0.15);
+}
+
+.panier .sous-menu
+{
+  background-color: RGBa(230, 160, 10, 0.15);
+}
+
+.compte .sous-menu
+{
+  background-color: RGBa(150, 150, 150, 0.85);
+}
+
+.menu-legume .sous-menu
+{
+  background-color: RGBa(000, 192, 38, 0.15);
+}
+
+.menu-fruit .sous-menu
+{
+  background-color: RGBa(255, 165, 000, 0.15);
+}
+
+.menu-viande .sous-menu
+{
+  background-color: RGBa(241, 77, 79, 0.15);
+}
+
+.menu-lait .sous-menu
+{
+  background-color: RGBa(255, 252, 204, 0.15);
+}
+
+.sous-menu li:hover a
+{
+  font-weight: bold;
+}
+
+.menu-legume .sous-menu li:hover
+{
+  background-color: RGB(100, 160, 112);
+}
+
+.menu-fruit .sous-menu li:hover
+{
+  background-color: RGB(220, 165, 100);
+}
+
+.menu-viande .sous-menu li:hover
+{
+  background-color: RGB(200, 100, 100);
+}
+
+.menu-lait .sous-menu li:hover
+{
+  background-color: RGB(255, 252, 204);
+}
+
+.home a
+{
+  font-size: 20px;
+  color: lightgrey;
+}
+
+nav input[type="checkbox"]
+{
+  display: none;
+}
+
+nav label
+{
+  display: none;
+}
+
+nav input[type=checkbox]:checked ~ ul /* pour afficher le menu quand on clique sur "menu"*/
+{
+  display: block;
+}
+
+@media screen and (max-width: 870px)
+{
+  .menu-deroulant
+  {
+    display: block;
+    color: #FFF;
+    background-color: purple;
+    text-align: center;
+    padding: 12px 0px;
+  }
+  nav ul
+  {
+    display: none;
+  }
+  nav ul li, nav ul li a
+  {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a, nav ul li:hover a
+  {
+    color: #FFF;
+
+    padding: 10px 0px;
+  }
+  nav li:hover .sous-menu
+  {
+    display: block;
+    position: static;
+  }
+}
