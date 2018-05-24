@@ -1,3 +1,6 @@
+<?php
+include ("install.php");
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,7 +14,7 @@
       <label for="menu-deroulant" class="menu-deroulant">Menu</label>
       <input type="checkbox" id="menu-deroulant" role="button">
       <ul>
-        <li class="home"><a href="index.html">Boutique</a></li>
+        <li class="home"><a href="index.php">Boutique</a></li>
         <li class="menu-legume"><a href="legume.php">Legume</a>
           <ul class="sous-menu">
             <li><a href="legume.php">Courgette</a></li>
@@ -43,6 +46,7 @@
             <li><a href="login.php">Se connecter</a></li>
             <li><a href="create.php">Cree un compte</a></li>
             <li><a href="modif.php">Modifier son compte</a></li>
+			<li><a href="supprimer.php">Supprimer son compte</a></li>
             <li><a href="logout.php">Deconnection</a></li>
           </ul></li>
         <li class="panier"><a href="panier.html">Panier</a>

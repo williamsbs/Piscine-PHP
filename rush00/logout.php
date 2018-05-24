@@ -1,7 +1,8 @@
 <?php
 session_start();
-include ('index.html');
+include ('index.php');
 $_SESSION["loggued_on_user"] = "";
+$_SESSION["loggued_on_passwd"] = "";
 ?>
 <html>
 	<head>

@@ -1,16 +1,13 @@
 <?php
 session_start();
-include ('index.html');
+include ('index.php');
 include ('auth.php');
 $i = 0;
-if( $_POST["submit"]== "OK")
-{
-	$i++;
-	echo $i;
-}
 if (auth($_POST["login"], $_POST["passwd"]) == TRUE)
 {
+	$passwd = hash(sha512, $_POST['passwd']);
 	$_SESSION['loggued_on_user'] = $_POST['login'];
+	$_SESSION['loggued_on_passwd'] = $passwd;
 ?>
 <html>
 	<head>

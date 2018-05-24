@@ -1,5 +1,5 @@
 <?php
-include ('index.html');
+include ('index.php');
  ?>
  <!DOCTYPE html>
 <html>
@@ -14,9 +14,7 @@ include ('index.html');
       <div class="gallery">
         <img class="salade" title="salade" src="https://jardinage.lemonde.fr/images/dossiers/2017-07/batavia-153406.jpg" alt="image_salade" >
         <div class="desc">La laitue, laitue cultivée ou salade est une plante herbacée appartenant au genre Lactuca, de la famille des Astéracées, largement cultivée pour ses feuilles tendres consommées comme légume, généralement crues en salade.
-          <form method="POST" action="panier.php">
-            <input type="submit" name="add" value="Ajouter au Panier">
-          </form>
+         <?php echo "<a href='detail.php?produit=".$elem[0]."'>Voir les produits !</a>"; ?>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <?php
-include ('index.html');
+include ('index.php');
 if ($_POST["login"] != "" && $_POST["passwd"] != "" && $_POST["submit"] == "OK")
 {
 	$passwd = hash(sha512,$_POST["passwd"]);

@@ -6,6 +6,10 @@ body
   background-color: #fff5ed;
 }
 
+.type
+{
+	text-align: center;
+}
 .connection
 {
   color: white;

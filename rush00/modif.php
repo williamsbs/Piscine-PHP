@@ -1,5 +1,5 @@
 <?php
-include ('index.html');
+include ('index.php');
 if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NULL)
 {
 	$oldpw = hash(sha512, $_POST["oldpw"]);
