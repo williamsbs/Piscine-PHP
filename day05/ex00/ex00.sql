@@ -1,0 +1,1 @@
+CREATE DATABASE db_wsabates CHARACTER SET 'utf8';
