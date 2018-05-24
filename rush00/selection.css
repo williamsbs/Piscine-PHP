@@ -1,44 +1,127 @@
-img{
-  width: 40%;
-  border-radius: 24px;
-  box-shadow: 6px 6px 6px #000000;
-  background-color: #909090;
+body
+{
+  font-family: "Arial";
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff5ed;
+}
+
+.connection
+{
+  color: white;
+  margin: 60px 500px 0px 500px;
+  background-color: grey;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 7px;
+  font-size: 18px;
+}
+
+h1
+{
+  text-align: center;
+  color: #777;
+}
+
+input[type="text"]
+{
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.description
-{
-  text-align: center;
-}
-hr
-{
-  width: 100%;
-  padding: 2px;
-  background-color: black;
+  background-color: #e0fffd;
+  padding: 14px 20px;
+  border-radius: 4px;
   border: none;
+  cursor: pointer;
+  font-size: 15px;
 }
+
+input[type="password"]
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e0fffd;
+  padding: 14px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
 input[type="submit"]
 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #6C3483;
+  background-color: orange;
   color: white;
   padding: 14px 20px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
 }
+
 input[type=submit]:hover {
-    background-color: #9B59B6;
+    background-color: red;
 }
-body
+
+img
 {
-  font-family: "Arial";
-  margin: 0px;
-  padding: 0px;
-  background-image:url(https://www.mitacs.ca/sites/all/themes/mitacs/images/parallax-bg-green.jpg);
+  border-radius: 9px;
+
+}
+
+div.gallery {
+  margin: 25px 12px 0px 12px;
+    border: 0.5px solid #000;
+    box-shadow: 6px 6px 6px #000;
+    border-radius: 12px;
+    background-color: #fff3eb;
+
+}
+
+div.gallery:hover {
+    border: 2px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 170px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 870px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 nav
@@ -115,7 +198,7 @@ nav li:hover .sous-menu
   padding: 15px 30px;
   font-size: 13px;
   color: #222538;
-  width: 150px;
+  width: 270px;
 }
 
 .panier:hover
@@ -156,32 +239,32 @@ nav li:hover .sous-menu
 
 .panier .sous-menu
 {
-  background-color: RGBa(230, 160, 10, 0.85);
+  background-color: RGBa(230, 160, 10, 0.95);
 }
 
 .compte .sous-menu
 {
-  background-color: RGBa(150, 150, 150, 0.85);
+  background-color: RGBa(150, 150, 150, 0.95);
 }
 
 .menu-legume .sous-menu
 {
-  background-color: RGBa(000, 192, 38, 0.85);
+  background-color: RGBa(62, 204, 124, 0.95);
 }
 
 .menu-fruit .sous-menu
 {
-  background-color: RGBa(255, 165, 000, 0.85);
+  background-color: RGBa(255, 165, 000, 0.95);
 }
 
 .menu-viande .sous-menu
 {
-  background-color: RGBa(241, 77, 79, 0.85);
+  background-color: RGBa(241, 77, 79, 0.95);
 }
 
 .menu-lait .sous-menu
 {
-  background-color: RGBa(255, 252, 204, 0.85);
+  background-color: RGBa(255, 252, 204, 0.95);
 }
 .sous-menu li:hover a
 {
