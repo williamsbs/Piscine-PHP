@@ -1,5 +1,6 @@
-
-<?php  include ("index.php"); ?>
+<?php
+session_start();
+include ("index.php"); ?>
 <!DOCTYPE html>
 <html>
 <body>
@@ -23,10 +24,11 @@
       echo "<table id='page-produit'>";
       echo "<tr><td class='produit'>".$data[$id][1]."</td><tr/>";
       echo "<tr><td><img src='".$data[$id][6]."'/ style='width:100%;'></td><tr/>";
-      echo "<tr><td>Description : ".$data[$id][2].", ".$data[$_GET[produit]][3]."</td><tr/>";
+      echo "<tr><td>Categorie : ".$data[$id][2]."</td><tr/>";
+	  // echo "<tr><td>Description : ".$data[$id][3]."</td><tr/>";
       echo "<tr><td>Poids : ".$data[$id][4]."</td><tr/>";
       echo "<tr><td>Prix : ".$data[$id][5]."</td><tr/>";
-	  echo "<tr><td><a href='panier.php?produit=".$data[$id][0]."'>Ajouter au panier</a></td><tr/>";
+	  echo "<tr><td><a href='add_panier.php?produit=".$data[$id][0]."'>Ajouter au panier</a></td><tr/>";
       echo "</table>";
     }
     ?>

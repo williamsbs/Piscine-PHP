@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['acheter'] = "";
 if(!file_exists("../private/passwd"))
 {
 	mkdir("../private", 0777, TRUE);

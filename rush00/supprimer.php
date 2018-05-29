@@ -6,7 +6,7 @@ $content = unserialize(file_get_contents("../private/passwd"));
 $i = 0;
 foreach($content as $elem)
 {
-	if ($_POST["login"] == $_SESSION['loggued_on_user'] && $passwd == $_SESSION['loggued_on_passwd'])
+	if ($elem["login"] == $_SESSION['loggued_on_user'] && $passwd == $_SESSION['loggued_on_passwd'])
 	{
 		$_SESSION["loggued_on_user"] = "";
 		$_SESSION["loggued_on_passwd"] = "";

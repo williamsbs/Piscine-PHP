@@ -3,9 +3,17 @@ session_start();
 include ('index.php');
 include ('auth.php');
 $i = 0;
-if (auth($_POST["login"], $_POST["passwd"]) == TRUE)
+$passwd = hash(sha512, $_POST['passwd']);
+if ($_SESSION['loggued_on_user'] != "")
 {
-	$passwd = hash(sha512, $_POST['passwd']);
+	?><h1>Vous etes connecté</h1><?php
+}
+else
+{
+	?><h1>Connection:</h1><?php
+}
+if (auth($_POST["login"], $_POST["passwd"]) == TRUE && $_SESSION['loggued_on_user'] == "")
+{
 	$_SESSION['loggued_on_user'] = $_POST['login'];
 	$_SESSION['loggued_on_passwd'] = $passwd;
 ?>
@@ -17,13 +25,17 @@ if (auth($_POST["login"], $_POST["passwd"]) == TRUE)
 	<body>
 		<h1>Vous etes connecté</h1>
 	</body>
-</html
+</html>
 <?php
 }
 if(auth($_POST["login"], $_POST["passwd"]) == FALSE && $_POST["submit"] == "OK")
 {
 	$_SESSION["loggued_on_user"] = "";
-	echo "Identifiant ou Mot de passe incorrecte\n";
+	?>
+	<h2>- Identifiant ou Mot de passe incorrecte.</h2>
+	<h2>- Il faut crée un compte pour se connecter.</h2>
+	<h2>- Il faut vous deconnecter avant de changer de compte.</h2>
+	<?php
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +45,6 @@ if(auth($_POST["login"], $_POST["passwd"]) == FALSE && $_POST["submit"] == "OK")
 		<title>Connection</title>
 	</head>
 	<body>
-		<h1>Connection</h1>
 		<div class="connection">
 		<form method="POST" action="login.php">
 			Identifiant:<input type="text" name="login" value="" />

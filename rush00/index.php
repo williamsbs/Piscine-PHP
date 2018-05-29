@@ -1,5 +1,6 @@
 <?php
 include ("install.php");
+ $data = unserialize(file_get_contents("../private/data"));
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,33 +15,40 @@ include ("install.php");
       <label for="menu-deroulant" class="menu-deroulant">Menu</label>
       <input type="checkbox" id="menu-deroulant" role="button">
       <ul>
-        <li class="home"><a href="index.php">Boutique</a></li>
-        <li class="menu-legume"><a href="legume.php">Legume</a>
-          <ul class="sous-menu">
-            <li><a href="legume.php">Courgette</a></li>
-            <li><a href="legume.php">Salade</a></li>
-            <li><a href="legume.php">Pomme de terre</a></li>
-            <li><a href="legume.php">Maïs</a></li>
-          </ul></li>
-        <li class="menu-fruit"><a href="fruit.php">Fruit</a>
-          <ul class="sous-menu">
-            <li><a href="fruit.php">Banane</a></li>
-            <li><a href="fruit.php">Fraise</a></li>
-            <li><a href="fruit.php">Pomme</a></li>
-            <li><a href="fruit.php">Orange</a></li>
-          </ul></li>
-        <li class="menu-viande"><a href="viande.php">Viande</a>
-          <ul class="sous-menu">
-            <li><a href="viande.php">Boeuf</a></li>\
-            <li><a href="viande.php">Poulet</a></li>
-            <li><a href="viande.php">Poisson</a></li>
-          </ul></li>
-        <li class="menu-lait"><a href="Lait.php">Produit laitier</a>
-          <ul class="sous-menu">
-            <li><a href="lait.php">Lait</a></li>
-            <li><a href="lait.php">Fromage</a></li>
-            <li><a href="lait.php">Yaourt</a></li>
-          </ul></li>
+		  <li class='home'><a href='selection.php'>Boutique</a></li>
+		  <?php
+		  $i=0;
+		  $j=0;
+// ------------------------------------LEGUME-----------------------------------------------
+        echo "<li class='menu-legume'><a href='Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+         echo "<ul class='sous-menu'>";
+		while($data[$j++][2] == "Legume")
+		{
+            echo"<li><a href='Articles_precis.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$i++][1]."</a></li>";
+		}
+          echo "</ul></li>";
+// ---------------------------------------FRUIT--------------------------------------------
+    	echo "<li class='menu-fruit'><a href='Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+          echo "<ul class='sous-menu'>";
+		  $j--;
+		  while($data[$j++][2] == "Fruit"){
+            echo "<li><a href='Articles_precis.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$i++][1]."</a></li>";}
+          echo "</ul></li>";
+// ---------------------------------------VIANDE--------------------------------------------
+        echo "<li class='menu-viande'><a href='Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+          echo "<ul class='sous-menu'>";
+		  $j--;
+		  while($data[$j++][2] == "Viande"){
+            echo "<li><a href='Articles_precis.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$i++][1]."</a></li>";}
+          echo "</ul></li>";
+// --------------------------------------LAIT---------------------------------------------
+        echo "<li class='menu-lait'><a href='Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+          echo "<ul class='sous-menu'>";
+		  $j--;
+		 while($data[$j++][2] == "Produits laitier"){
+            echo "<li><a href='Articles_precis.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$i++][1]."</a></li>";}
+		echo "</ul></li>";
+// -----------------------------------------------------------------------------------?>
         <li class="compte"><a href="#">Compte</a>
           <ul class="sous-menu">
             <li><a href="login.php">Se connecter</a></li>
@@ -49,7 +57,7 @@ include ("install.php");
 			<li><a href="supprimer.php">Supprimer son compte</a></li>
             <li><a href="logout.php">Deconnection</a></li>
           </ul></li>
-        <li class="panier"><a href="panier.html">Panier</a>
+        <li class="panier"><a href="panier.php">Panier</a>
           <ul class="sous-menu">
             <li><a href="#">Visualiser le panier</a></li>
             <li><a href="#">passer la commande</a></li>
