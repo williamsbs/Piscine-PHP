@@ -6,51 +6,120 @@ body
   background-color: #fff5ed;
 }
 
-.type
+div .aff_prod
 {
+	margin: 20px 20px 0px 20px;
+	font-size: 22px;
+	color: #5b5b5c;
 	text-align: center;
+	border: 2px solid #777;
+	box-shadow: 3px 3px 3px #777;
+	border-radius: 10px;
+	background-color: #fff3eb;
+	padding: 0px 10px;
+}
+.recap_panier
+{
+	box-shadow: 3px 3px 3px #777;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.voir_articles:hover {
+    border: 2px solid #000;
+	background-color: #ff3a3c;
+}
+.aff_prod img{
+    width: 100%;
+}
+.voir_articles
+{
+	font-size: 20px;
+	text-decoration: none;
+	display: block;
+    margin: 10px;
+    background-color: orange;
+	box-shadow: 5px 5px 5px #777;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+	text-shadow: 2px 2px 10px #000;
+}
+.admin-users
+{
+	font-size: 20px;
+	text-decoration: none;
+    margin: 10px;
+    background-color: lightblue;
+	box-shadow: 5px 5px 5px #777;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 9px;
+    cursor: pointer;
+	text-shadow: 2px 2px 10px #000;
+}
+.admin-users:hover {
+    border: 2px solid #777;
+	background-color: orange;
+}
+#produit
+{
+	border: 2px solid black;
 }
 .connection
 {
   color: white;
-  margin: 60px 500px 0px 500px;
+  margin: auto;
   background-color: grey;
   text-align: center;
   padding: 14px 20px;
   border-radius: 7px;
   font-size: 18px;
+  padding: 10px;
+  width: 25%;
+
 }
 
 h1
 {
-  text-align: center;
-  color: #777;
+	text-align: center;
+	color: #777;
 }
-
+h2
+{
+	font-size: 30px;
+  	color: grey;
+	text-decoration: underline;
+}
 input[type="text"]
 {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   background-color: #e0fffd;
   padding: 14px 20px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   font-size: 15px;
+  width: 70%;
 }
 
 input[type="password"]
 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #e0fffd;
-  padding: 14px 20px;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
+	display: block;
+	margin: auto;
+	background-color: #e0fffd;
+	padding: 14px 20px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+	width: 70%;
 }
 
 input[type="submit"]
@@ -73,56 +142,37 @@ input[type=submit]:hover {
 img
 {
   border-radius: 9px;
-
 }
-
-div.gallery {
-  margin: 25px 12px 0px 12px;
-    border: 0.5px solid #000;
-    box-shadow: 6px 6px 6px #000;
-    border-radius: 12px;
-    background-color: #fff3eb;
-
-}
-
-div.gallery:hover {
-    border: 2px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: 170px;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-* {
+*
+{
     box-sizing: border-box;
 }
-
-.responsive {
+.responsive
+{
     padding: 0 6px;
     float: left;
-    width: 24.99999%;
+    width: 25%;
 }
 
-@media only screen and (max-width: 870px) {
-    .responsive {
+@media only screen and (max-width: 870px)
+{
+    .responsive
+	{
         width: 49.99999%;
         margin: 6px 0;
     }
 }
 
-@media only screen and (max-width: 400px) {
-    .responsive {
+@media only screen and (max-width: 400px)
+{
+    .responsive
+	{
         width: 100%;
     }
 }
 
-.clearfix:after {
+.clearfix:after
+{
     content: "";
     display: table;
     clear: both;
@@ -180,8 +230,6 @@ nav a
   display: inline-block;
   text-decoration: none;
 }
-
-
 nav li:hover .sous-menu
 {
   display: inline-block;

@@ -43,10 +43,9 @@ if ($_POST["login"] != "" && $_POST["passwd"] != "" && $_POST["submit"] == "OK")
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Creer un compte</title>
 	</head>
 	<body>
-		<h1>Cree un compte</h1>
+		<h1>Créer un compte:</h1>
 		<div class="connection">
 		<form method="POST" action="create.php">
 			Identifiant: <input type="text" name="login" value="">

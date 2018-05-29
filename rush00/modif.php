@@ -35,7 +35,7 @@ if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NU
 		<title>Modifier un compte</title>
 	</head>
 	<body>
-		<h1>Modifier son compte</h1>
+		<h1>Modifier son compte:</h1>
 		<div class="connection">
 		<form method="POST" action="modif.php">
 			Identifiant: <input type="text" name="login" value="">

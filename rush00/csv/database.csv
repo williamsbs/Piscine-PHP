@@ -9,7 +9,7 @@ id,type,categorie,quantite,poids,prix,image
 8,Orange,Fruit,22,1kg,3.50€,../img/orange.jpg
 9,Boeuf,Viande,7,1kg,6€,../img/boeuf.jpg
 10,poulet,Viande,5,1kg,5.50€,../img/poulet.jpg
-11,Poisson,Viande,3,1kg,Gratuit€,../img/poisson.jpg
+11,Poisson,Viande,3,1kg,1000€,../img/poisson.jpg
 12,Lait,Produits laitier,7,1kg,2.50€,../img/lait.jpg
 13,Fromage,Produits laitier,2,1kg,4.50€,../img/fromage.jpg
 14,Yaourt,Produits laitier,45,0.250kg,2.50€,../img/yaourt.jpg

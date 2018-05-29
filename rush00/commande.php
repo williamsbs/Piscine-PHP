@@ -3,15 +3,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-<!-- Mon_Compte -->
-<div id='content'>
-<h3>Bonjour <?php echo $_SESSION['loggued_on_user'] ?>, Votre commande a bien ete effectuer:</h3>
-<br />
-<p>Votre prenom: <?php echo $_SESSION['loggued_on_user'] ?></p>
-<br />
+<h1>Bonjour <?php echo $_SESSION['loggued_on_user'] ?>, Votre commande a bien ete effectuer:</h1>
 
-
-<p>Mes Commandes:</p>
+<h2>Ma Commandes:</h2>
 <?PHP
 if ($_POST['compte'] == "Acheter" || ((count($_SESSION['historique'])) != 0))
 {
@@ -21,7 +15,7 @@ if ($_POST['compte'] == "Acheter" || ((count($_SESSION['historique'])) != 0))
 	if ($_SESSION['nb_articles'] != 0)
 	{
 		$total = 0;
-		echo "<table id='tab-admin-dino'>";
+		echo "<table class='recap_panier'>";
 		echo "<tr><th>Articles</th><th>Quantite</th><th>Prix</th><tr/>";
 		foreach ($_SESSION['historique'] as $elem)
 		{

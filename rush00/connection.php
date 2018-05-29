@@ -8,7 +8,7 @@ include ('index.php');
 		<title>Connection</title>
 	</head>
 	<body>
-		<h1>Connection</h1>
+		<h1>Connection:</h1>
 		<div class="connection">
 		<form method="POST" action="login.php">
 			Identifiant:<input type="text" name="login" value="" />

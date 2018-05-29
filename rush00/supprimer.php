@@ -24,7 +24,7 @@ foreach($content as $elem)
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		<h1>Suppimer le compte</h1>
+		<h1>Suppimer le compte:</h1>
 		<div class="connection">
 		<form method="POST" action="supprimer.php">
 			Identifiant:<input type="text" name="login" value="" />

@@ -3,17 +3,18 @@ include ("index.php"); ?>
 <!DOCTYPE html>
 <html>
 <body>
-  <?php
-    // echo "<aside>";
+<?php
  $data = unserialize(file_get_contents("../private/data"));
- echo "<table id='boutique'>";
  foreach ($data as $elem)
  {
-   echo "<tr><td class='type'>".$elem[1]."</td></tr>";
-   echo "<tr><td><img src='".$elem[6]."'/ style='width:20%;'></td><tr/>";
-   echo "<tr><td class='acheter_articles'><a href='detail.php?produit=".$elem[0]."'>Voir les produits !</a></td></tr>";
+	 echo "<div class='responsive'>";
+	 echo "<div class='aff_prod'>";
+	 echo "<tr><td>".$elem[1]."</td></tr>";
+	 echo "<tr><td><img src='".$elem[6]."'></td><tr/>";
+	 echo "<tr><td><a class='voir_articles' href='detail.php?produit=".$elem[0]."'>Voir les ".$elem[1]."s !</a></td></tr>";
+	 echo "</div>";
+	 echo "</div>";
  }
- echo "</table>";
  ?>
 </body>
 </html>

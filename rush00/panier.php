@@ -6,9 +6,6 @@ include ("index.php");
 <html>
 <meta charset="utf-8">
 <body>
-
-<div id="content">
-
 <?PHP
 $data = "../private/data";
 $content = unserialize(file_get_contents($data));
@@ -16,7 +13,7 @@ $_SESSION['nb_articles'] = count($_SESSION['panier']);
 if ($_SESSION['nb_articles'] != 0)
 {
 		$total = 0;
-		echo "<table id='tab-admin-dino'>";
+		echo "<table class='recap_panier'>";
 		echo "<tr><th>Articles: </th><th>Quantite: </th><th>Prix: </th><tr/>";
 		foreach ($_SESSION['panier'] as $elem)
 		{
@@ -37,7 +34,7 @@ if ($_SESSION['nb_articles'] != 0)
 		}
 		else if ($_SESSION['loggued_on_user'] == "")
 		{
-			echo "<form action='inscription.php' method='post'>";
+			echo "<form action='login.php' method='post'>";
 				echo "<input type='submit' name='pas-compte' value='Pas de compte' />";
 			echo "</form>";
 		}
@@ -47,7 +44,6 @@ else
 	echo "<p>Votre panier est vide</p>";
 }
 ?>
-<a href="vide_panier.php">Vider le panier </a>
-</div>
+<a class='admin-users' href="vide_panier.php">Vider le panier </a>
 </body>
 </html>
