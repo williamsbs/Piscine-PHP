@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ("index.php");
+include ("header.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,16 +34,18 @@ if ($_SESSION['nb_articles'] != 0)
 		}
 		else if ($_SESSION['loggued_on_user'] == "")
 		{
-			echo "<form action='login.php' method='post'>";
-				echo "<input type='submit' name='pas-compte' value='Pas de compte' />";
+			echo "<form action='connection/login.php' method='post'>";
+				echo "<input type='submit' name='pas-compte' value='Vous êtes pas connecté' />";
 			echo "</form>";
 		}
+		?>
+		<a class='admin-users' href="vide_panier.php">Vider le panier </a>
+		</body>
+		</html>
+		<?php
 }
 else
 {
-	echo "<p>Votre panier est vide</p>";
+	echo "<h1>Votre panier est vide</h1>";
 }
 ?>
-<a class='admin-users' href="vide_panier.php">Vider le panier </a>
-</body>
-</html>

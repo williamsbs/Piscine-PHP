@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('index.php');
+include ('header_connection.php');
 if ($_SESSION["loggued_on_user"] != "")
 {
 	$_SESSION["loggued_on_user"] = "";

@@ -1,10 +1,10 @@
 <?php
-include ('index.php');
+include ('header_connection.php');
 if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NULL)
 {
 	$oldpw = hash(sha512, $_POST["oldpw"]);
 	$newpw = hash(sha512, $_POST["newpw"]);
-	$content = unserialize(file_get_contents("../private/passwd"));
+	$content = unserialize(file_get_contents("../../private/passwd"));
 	$i = 0;
 	$changed = 0;
 	foreach($content as $elem)
@@ -23,7 +23,7 @@ if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NU
 	if ($changed == 1)
 	{
 		$serialised = serialize($content);
-		file_put_contents("../private/passwd", $serialised);
+		file_put_contents("../../private/passwd", $serialised);
 		echo "Mot de passe modifier\n";
 	}
 }

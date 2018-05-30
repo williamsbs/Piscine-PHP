@@ -7,5 +7,5 @@ foreach($data as $elem)
 	$tab_info[] = $info;
 }
 $serialised = serialize($tab_info);
-file_put_contents("../private/data", $serialised);
+file_put_contents("private/data", $serialised);
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ("index.php"); ?>
+include ("header.php"); ?>
 <!DOCTYPE html>
 <html>
 <body>
@@ -15,7 +15,7 @@ include ("index.php"); ?>
           $flag = 1;
     }
 	?>
-	<h1><?php echo $data[$id][1];?></h1>
+	<h1><?php echo $data[$id][1];?>:</h1>
 	<?php
     if (isset($_GET[produit]) && $_GET[produit] != NULL &&
     $_GET[produit] >= 0 && is_numeric($_GET[produit]) && $flag == 1)

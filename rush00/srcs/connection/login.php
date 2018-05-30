@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('index.php');
+include ('header_connection.php');
 include ('auth.php');
 $i = 0;
 $passwd = hash(sha512, $_POST['passwd']);

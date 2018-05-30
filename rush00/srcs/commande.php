@@ -1,5 +1,5 @@
 <?PHP session_start(); ?>
-<?PHP include ("index.php"); ?>
+<?PHP include ("header.php"); ?>
 <!DOCTYPE html>
 <html>
 <body>
@@ -36,6 +36,8 @@ else
 {
 	echo"<p>Auncune commande</p>";
 }
+unset($_SESSION['panier']);
+
 ?>
 </body>
 </html>

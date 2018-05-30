@@ -1,14 +1,14 @@
 <?php
 session_start();
 $_SESSION['acheter'] = "";
-if(!file_exists("../private/passwd"))
+if(!file_exists("private/passwd"))
 {
-	mkdir("../private", 0777, TRUE);
+	mkdir("private", 0777, TRUE);
 	$tab_count = array(array("login" => "admin", "passwd" => hash(sha512, "admin")));
 	$serialised_count = serialize($tab_count);
-	file_put_contents("../private/passwd", $serialised_count);
+	file_put_contents("private/passwd", $serialised_count);
 }
-if(!file_exists("../private/categorie"))
+if(!file_exists("private/categorie"))
 {
 	$tab_cat[0][legume] = "courgette";
 	$tab_cat[1][legume] = "salade";
@@ -25,8 +25,8 @@ if(!file_exists("../private/categorie"))
 	$tab_cat[produit_laitier][1] = "fromage";
 	$tab_cat[produit_laitier][2] = "Yaourt";
 	$serialised_cat = serialize($tab_cat);
-	file_put_contents("../private/categorie", $serialised_cat);
-	$unserialised = unserialize(file_get_contents("../private/categorie"));
+	file_put_contents("private/categorie", $serialised_cat);
+	$unserialised = unserialize(file_get_contents("private/categorie"));
 }
-include ('get_data.php');
+include ('srcs/get_data.php');
 ?>

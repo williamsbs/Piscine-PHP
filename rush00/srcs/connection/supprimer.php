@@ -1,8 +1,8 @@
 <?php
 session_start();
-include ('index.php');
+include ('header_connection.php');
 $passwd = hash(sha512, $_POST["passwd"]);
-$content = unserialize(file_get_contents("../private/passwd"));
+$content = unserialize(file_get_contents("../../private/passwd"));
 $i = 0;
 foreach($content as $elem)
 {
@@ -12,7 +12,7 @@ foreach($content as $elem)
 		$_SESSION["loggued_on_passwd"] = "";
 		unset($content[$i]);
 		$serialised = serialize($content);
-		file_put_contents("../private/passwd", $serialised);
+		file_put_contents("../../private/passwd", $serialised);
 		echo "Votre compte a ete supprimer";
 	}
 	$i++;

@@ -1,0 +1,15 @@
+a:14:{i:0;a:7:{i:0;s:1:"1";i:1;s:9:"Courgette";i:2;s:6:"Legume";i:3;s:1:"5";i:4;s:7:"0.500kg";i:5;s:4:"5€";i:6;s:22:"../img/courgette.jpg
+";}i:1;a:7:{i:0;s:1:"2";i:1;s:6:"Salade";i:2;s:6:"Legume";i:3;s:1:"3";i:4;s:3:"1kg";i:5;s:4:"3€";i:6;s:19:"../img/salade.jpg
+";}i:2;a:7:{i:0;s:1:"3";i:1;s:14:"Pomme de terre";i:2;s:6:"Legume";i:3;s:1:"8";i:4;s:3:"1kg";i:5;s:4:"5€";i:6;s:20:"../img/patates.jpg
+";}i:3;a:7:{i:0;s:1:"4";i:1;s:4:"Mais";i:2;s:6:"Legume";i:3;s:1:"4";i:4;s:3:"1kg";i:5;s:7:"4.50€";i:6;s:17:"../img/mais.jpg
+";}i:4;a:7:{i:0;s:1:"5";i:1;s:6:"Banane";i:2;s:5:"Fruit";i:3;s:1:"6";i:4;s:3:"1kg";i:5;s:7:"2.50€";i:6;s:19:"../img/banane.jpg
+";}i:5;a:7:{i:0;s:1:"6";i:1;s:6:"Fraise";i:2;s:5:"Fruit";i:3;s:2:"18";i:4;s:3:"1kg";i:5;s:7:"3.50€";i:6;s:19:"../img/fraise.jpg
+";}i:6;a:7:{i:0;s:1:"7";i:1;s:5:"Pomme";i:2;s:5:"Fruit";i:3;s:2:"12";i:4;s:7:"0.200kg";i:5;s:7:"0.80€";i:6;s:18:"../img/pomme.jpg
+";}i:7;a:7:{i:0;s:1:"8";i:1;s:6:"Orange";i:2;s:5:"Fruit";i:3;s:2:"22";i:4;s:3:"1kg";i:5;s:7:"3.50€";i:6;s:19:"../img/orange.jpg
+";}i:8;a:7:{i:0;s:1:"9";i:1;s:5:"Boeuf";i:2;s:6:"Viande";i:3;s:1:"7";i:4;s:3:"1kg";i:5;s:4:"6€";i:6;s:18:"../img/boeuf.jpg
+";}i:9;a:7:{i:0;s:2:"10";i:1;s:6:"poulet";i:2;s:6:"Viande";i:3;s:1:"5";i:4;s:3:"1kg";i:5;s:7:"5.50€";i:6;s:19:"../img/poulet.jpg
+";}i:10;a:7:{i:0;s:2:"11";i:1;s:7:"Poisson";i:2;s:6:"Viande";i:3;s:1:"3";i:4;s:3:"1kg";i:5;s:7:"1000€";i:6;s:20:"../img/poisson.jpg
+";}i:11;a:7:{i:0;s:2:"12";i:1;s:4:"Lait";i:2;s:16:"Produits laitier";i:3;s:1:"7";i:4;s:3:"1kg";i:5;s:7:"2.50€";i:6;s:17:"../img/lait.jpg
+";}i:12;a:7:{i:0;s:2:"13";i:1;s:7:"Fromage";i:2;s:16:"Produits laitier";i:3;s:1:"2";i:4;s:3:"1kg";i:5;s:7:"4.50€";i:6;s:20:"../img/fromage.jpg
+";}i:13;a:7:{i:0;s:2:"14";i:1;s:6:"Yaourt";i:2;s:16:"Produits laitier";i:3;s:2:"45";i:4;s:7:"0.250kg";i:5;s:7:"2.50€";i:6;s:19:"../img/yaourt.jpg
+";}}

@@ -2,7 +2,7 @@
 function auth($login, $passwd)
 {
    $mdp = hash(sha512, $passwd);
-   $content = unserialize(file_get_contents("../private/passwd"));
+   $content = unserialize(file_get_contents("../../private/passwd"));
    $is_logged = FALSE;
    foreach($content as $elem)
    {
