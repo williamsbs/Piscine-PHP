@@ -2,7 +2,7 @@ id,type,categorie,quantite,poids,prix,image
 1,Courgette,Legume,5,0.500kg,5€,../img/courgette.jpg
 2,Salade,Legume,3,1kg,3€,../img/salade.jpg
 3,Pomme de terre,Legume,8,1kg,5€,../img/patates.jpg
-4,Mais,Legume,4,1kg,4.50€,../img/mais.jpg
+4,Brocoli,Legume,4,1kg,4.50€,../img/mais.jpg
 5,Banane,Fruit,6,1kg,2.50€,../img/banane.jpg
 6,Fraise,Fruit,18,1kg,3.50€,../img/fraise.jpg
 7,Pomme,Fruit,12,0.200kg,0.80€,../img/pomme.jpg
@@ -13,3 +13,4 @@ id,type,categorie,quantite,poids,prix,image
 12,Lait,Produits laitier,7,1kg,2.50€,../img/lait.jpg
 13,Fromage,Produits laitier,2,1kg,4.50€,../img/fromage.jpg
 14,Yaourt,Produits laitier,45,0.250kg,2.50€,../img/yaourt.jpg
+15,Salade,Fruit,3,1kg,3€,../img/salade.jpg

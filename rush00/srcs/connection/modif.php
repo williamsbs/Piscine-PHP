@@ -1,32 +1,39 @@
 <?php
+session_start();
 include ('header_connection.php');
-if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NULL)
+if ($_SESSION["loggued_on_user"] != "" )
 {
-	$oldpw = hash(sha512, $_POST["oldpw"]);
-	$newpw = hash(sha512, $_POST["newpw"]);
-	$content = unserialize(file_get_contents("../../private/passwd"));
-	$i = 0;
-	$changed = 0;
-	foreach($content as $elem)
+	if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NULL && $_SESSION["loggued_on_user"] == $_POST["login"] )
 	{
-		if ($elem["login"] == $_POST["login"] && $elem["passwd"] == $oldpw)
+		$oldpw = hash(sha512, $_POST["oldpw"]);
+		$newpw = hash(sha512, $_POST["newpw"]);
+		$content = unserialize(file_get_contents("../../private/passwd"));
+		$i = 0;
+		$changed = 0;
+		foreach($content as $elem)
 		{
-			$content[$i]["passwd"] = $newpw;
-			$changed = 1;
+			if ($elem["login"] == $_POST["login"] && $elem["passwd"] == $oldpw)
+			{
+				$content[$i]["passwd"] = $newpw;
+				$changed = 1;
+			}
+			$i++;
 		}
-		if ($elem["passwd"] != $oldpw)
+		if ($changed == 1)
 		{
-			echo "L'Ancier mot de passe est incorrecte\n";
+			$serialised = serialize($content);
+			file_put_contents("../../private/passwd", $serialised);
+			?>
+			<h1>Mot de passe modifier</h1>
+			<?php
 		}
-		$i++;
+		elseif ($changed == 0)
+		{
+			?>
+			<h1>Parametre incorrecte</h1>
+			<?php
+		}
 	}
-	if ($changed == 1)
-	{
-		$serialised = serialize($content);
-		file_put_contents("../../private/passwd", $serialised);
-		echo "Mot de passe modifier\n";
-	}
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +42,7 @@ if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NU
 		<title>Modifier un compte</title>
 	</head>
 	<body>
-		<h1>Modifier son compte:</h1>
+		<h1>Modifier son mot de passe:</h1>
 		<div class="connection">
 		<form method="POST" action="modif.php">
 			Identifiant: <input type="text" name="login" value="">
@@ -48,3 +55,12 @@ if ($_POST["submit"] == "OK" && $_POST["newpw"] != NULL && $_POST["login"] != NU
 	</div>
 	</body>
 </html>
+<?php
+}
+else
+{
+	?>
+	<h1>Vous devez etre connecter pour modifier votre compte</h1>
+	<?php
+}
+?>

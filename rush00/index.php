@@ -19,8 +19,17 @@ include ("install.php");
 		  <?php
 		  $i=0;
 		  $j=0;
+		  $content = unserialize(file_get_contents("private/categorie"));
+		  $cat1 = $content[cat1];
+		  $cat2 = $content[cat2];
+		  $cat3 = $content[cat3];
+		  $cat4 = $content[cat4];
+		  foreach($cat1 as $elem1){}
+		  foreach($cat2 as $elem2){}
+		  foreach($cat3 as $elem3){}
+		  foreach($cat4 as $elem4){}
 // ------------------------------------LEGUME-----------------------------------------------
-        echo "<li class='menu-legume'><a href='srcs/Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+        echo "<li class='menu-legume'><a href='srcs/Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$elem1."</a>";
          echo "<ul class='sous-menu'>";
 		while($data[$j++][2] == "Legume")
 		{
@@ -28,28 +37,28 @@ include ("install.php");
 		}
           echo "</ul></li>";
 // ---------------------------------------FRUIT--------------------------------------------
-    	echo "<li class='menu-fruit'><a href='srcs/Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+    	echo "<li class='menu-fruit'><a href='srcs/Articles.php?id=".$i."&categorie=".$elem2."'>".$elem2."</a>";
           echo "<ul class='sous-menu'>";
 		  $j--;
 		  while($data[$j++][2] == "Fruit"){
             echo"<li><a href='srcs/detail.php?produit=".($i+1)."'>".$data[$i++][1]."</a></li>";}
           echo "</ul></li>";
 // ---------------------------------------VIANDE--------------------------------------------
-        echo "<li class='menu-viande'><a href='srcs/Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+        echo "<li class='menu-viande'><a href='srcs/Articles.php?id=".$i."&categorie=".$elem3."'>".$elem3."</a>";
           echo "<ul class='sous-menu'>";
 		  $j--;
 		  while($data[$j++][2] == "Viande"){
             echo"<li><a href='srcs/detail.php?produit=".($i+1)."'>".$data[$i++][1]."</a></li>";}
           echo "</ul></li>";
 // --------------------------------------LAIT---------------------------------------------
-        echo "<li class='menu-lait'><a href='srcs/Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$data[$j][2]."</a>";
+        echo "<li class='menu-lait'><a href='srcs/Articles.php?id=".$i."&categorie=".$elem4."'>".$elem4."</a>";
           echo "<ul class='sous-menu'>";
 		  $j--;
 		 while($data[$j++][2] == "Produits laitier"){
             echo"<li><a href='srcs/detail.php?produit=".($i+1)."'>".$data[$i++][1]."</a></li>";}
 		echo "</ul></li>";
 // -----------------------------------------------------------------------------------?>
-        <li class="compte"><a href="srcs/#">Compte</a>
+        <li class="compte"><a href="#">Compte</a>
           <ul class="sous-menu">
             <li><a href="srcs/connection/login.php">Se connecter</a></li>
             <li><a href="srcs/connection/create.php">Cree un compte</a></li>
@@ -62,13 +71,23 @@ include ("install.php");
             <li><a href="srcs/panier.php">Visualiser le panier</a></li>
             <li><a href="srcs/vide_panier.php">supprimer le panier</a></li>
           </ul></li>
+		  <?php
+		  if ($_SESSION["loggued_on_user"] == "admin")
+		  {
+			  echo "<li class='compte'><a href='srcs/admin/admin.php'>Admin</a>";
+			  echo "<ul class='sous-menu'>";
+			  echo "<li><a href='srcs/admin/add_user.php'>Ajouter un utilisateur</a></li>";
+			  echo "<li><a href='srcs/admin/modif_user.php'>Modifier un utilisateur</a></li>";
+			  echo "<li><a href='srcs/admin/sup_user.php'>Supprimer un utilisateur</a></li>";
+			  echo "<li><a href='srcs/admin/products.php'>Ajouter un categorie</a></li>";
+			  echo "<li><a href='srcs/admin/sup_user.php'>Supprimer un categorie</a></li>";
+			  echo "</ul></li>";
+		  }
+		  ?>
       </ul>
     </nav>
   </body>
 </html>
 <?php
-if ($_SESSION["loggued_on_user"] == "admin")
-{
-	echo "<a href='srcs/admin/admin.php'>Admin</a></li>";
-}
+
 ?>

@@ -8,7 +8,7 @@ include ("header.php"); ?>
  $j=0;
  foreach ($data as $elem)
  {
-	 while($data[$j++][2] == $_GET[categorie])
+	 while($data[$j++][2] === $_GET[categorie])
 	 {
 		echo "<div class='responsive'>";
 		echo "<div class='aff_prod'>";

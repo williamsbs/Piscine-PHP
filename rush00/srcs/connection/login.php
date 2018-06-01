@@ -10,7 +10,25 @@ if ($_SESSION['loggued_on_user'] != "")
 }
 else
 {
-	?><h1>Connection:</h1><?php
+	?><h1>Connection:</h1>
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Connection</title>
+		</head>
+		<body>
+			<div class="connection">
+			<form method="POST" action="login.php">
+				Identifiant:<input type="text" name="login" value="" />
+			</br>
+				Mot de passe: <input type="password" name="passwd" value="" />
+			</br>
+				<input type="submit" name="submit" value="OK" />
+			</form>
+		</div>
+		</body>
+	</html><?php
 }
 if (auth($_POST["login"], $_POST["passwd"]) == TRUE && $_SESSION['loggued_on_user'] == "")
 {
@@ -27,6 +45,7 @@ if (auth($_POST["login"], $_POST["passwd"]) == TRUE && $_SESSION['loggued_on_use
 	</body>
 </html>
 <?php
+echo "<meta http-equiv='refresh' content='0,url=login.php'>";
 }
 if(auth($_POST["login"], $_POST["passwd"]) == FALSE && $_POST["submit"] == "OK")
 {
@@ -38,21 +57,3 @@ if(auth($_POST["login"], $_POST["passwd"]) == FALSE && $_POST["submit"] == "OK")
 	<?php
 }
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Connection</title>
-	</head>
-	<body>
-		<div class="connection">
-		<form method="POST" action="login.php">
-			Identifiant:<input type="text" name="login" value="" />
-		</br>
-			Mot de passe: <input type="password" name="passwd" value="" />
-		</br>
-			<input type="submit" name="submit" value="OK" />
-		</form>
-	</div>
-	</body>
-</html>
