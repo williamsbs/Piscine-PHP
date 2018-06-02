@@ -1,16 +1,15 @@
 <?PHP session_start(); ?>
-<?PHP include ("header.php"); ?>
+<?PHP include ("header_admin.php"); ?>
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Bonjour <?php echo $_SESSION['loggued_on_user'] ?>, Votre commande a bien été effectuée:</h1>
+<h1> Dernier commande effectuées:</h1>
 
-<h2>Ma Commande:</h2>
+<h2>Commandes de <?php echo $_SESSION['old_loggued_on_user'] ?>:</h2>
 <?PHP
 if ($_POST['compte'] == "Acheter" || ((count($_SESSION['historique'])) != 0))
 {
-	$_SESSION['old_loggued_on_user'] = $_SESSION['loggued_on_user'];
-	$unserialized = unserialize(file_get_contents("../private/data"));
+	$unserialized = unserialize(file_get_contents("../../private/data"));
 	$_SESSION['nb_articles'] = count($_SESSION['historique']);
 	if ($_SESSION['nb_articles'] != 0)
 	{
@@ -37,7 +36,6 @@ else
 	echo"<p>Auncune commande</p>";
 }
 unset($_SESSION['panier']);
-
 ?>
 </body>
 </html>

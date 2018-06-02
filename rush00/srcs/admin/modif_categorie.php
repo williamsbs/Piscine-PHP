@@ -12,9 +12,9 @@ if ((isset($_POST['ancienne']) && $_POST['ancienne'] != NULL)&&
     $i = 0;
     foreach($value as $elem)
     {
-		print_r($elem);
       if ($elem == $_POST['ancienne']){
-        $content[$cat][$i] = $_POST['nouvelle'];
+        $content[$cat][$_POST['nouvelle']] = $_POST['nouvelle'];
+		unset($content[$cat][$_POST['ancienne']]);
         $ok = 1;
       }
       $i++;
@@ -29,7 +29,7 @@ else
 echo $ok;
 if ($ok == 0)
 {
-  $_SESSION['modif_cat'] = "ko";
+  $_SESSION['modif_cat'] = 0;
   echo "<meta http-equiv='refresh' content='0,url=categories.php'>";
   exit();
 }
@@ -37,7 +37,7 @@ else if ($ok == 1)
 {
   $serialized = serialize($content);
   file_put_contents("../../private/categorie", $serialized);
-  $_SESSION['modif_cat'] = "ok";
+  $_SESSION['modif_cat'] = 1;
   echo "<meta http-equiv='refresh' content='0,url=categories.php'>";
   exit();
 }

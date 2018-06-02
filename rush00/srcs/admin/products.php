@@ -26,6 +26,12 @@ echo "<table class='products'>";
 	}
 	echo "</table>";
 	?>
+	<?php
+	if(	$_SESSION["ajouter"] == 1)
+	{
+		echo "<h1>Il faut remplire tous les champs</h1>";
+	}
+	?>
 	<h1>Ajouter un produit</h1>
 	<div class='connection'>
 		<form method="POST" action="add_product.php">

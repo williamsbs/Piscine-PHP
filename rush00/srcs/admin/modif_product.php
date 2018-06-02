@@ -12,7 +12,8 @@ function get_data($content)
 	(isset($_POST['poids']) && $_POST['poids'] != NULL) &&
 	(isset($_POST['prix']) && $_POST['prix'] != NULL) &&
 	(isset($_POST['image']) && $_POST['image'] != NULL) &&
-	(isset($_POST['submit']) && $_POST['submit'] == "valider"))
+	(isset($_POST['submit']) && $_POST['submit'] == "valider") &&
+	$_POST['categorie'] == $content[$i++][2])
 	{
 		$tab[0] = $_POST['id'];
 		$tab[1] = $_POST['type'];

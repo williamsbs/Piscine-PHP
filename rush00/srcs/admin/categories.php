@@ -7,7 +7,7 @@ $cat2 = $content[cat2];
 $cat3 = $content[cat3];
 $cat4 = $content[cat4];
 $cat5 = $content[cat5];
-echo "<table>";
+echo "<table class='products'>";
 	 echo "<tr>
 	 <th>Catégorie :</th>
 	 </tr>";

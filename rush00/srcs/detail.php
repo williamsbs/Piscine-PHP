@@ -8,6 +8,19 @@ include ("header.php"); ?>
     <?php
     $data = unserialize(file_get_contents("../private/data"));
     $flag = 0;
+	$content = unserialize(file_get_contents("../private/categorie"));
+	$cat1 = $content[cat1];
+	$cat2 = $content[cat2];
+	$cat3 = $content[cat3];
+	$cat4 = $content[cat4];
+	foreach($cat1 as $elem1){}
+	foreach($cat2 as $elem2){}
+	foreach($cat3 as $elem3){}
+	foreach($cat4 as $elem4){}
+	$tab[0] = $elem1;
+	$tab[1] = $elem2;
+	$tab[2] = $elem3;
+	$tab[3] = $elem4;
     $id = $_GET[produit] - 1;
     foreach ($data as $elem)
     {
@@ -26,10 +39,17 @@ include ("header.php"); ?>
 		echo "<table>";
 		echo "<tr><td class='produit'>".$data[$id][1]."</td><tr/>";
 		echo "<tr><td><img src='".$data[$id][6]."'></td><tr/>";
-		echo "<tr><td>Categorie : ".$data[$id][2]."</td><tr/>";
-		// echo "<tr><td>Description : ".$data[$id][3]."</td><tr/>";
+		if ($data[$id][2] == "Legume")
+			echo "<tr><td>Categorie : ".$tab[0]."</td><tr/>";
+		if ($data[$id][2] == "Fruit")
+			echo "<tr><td>Categorie : ".$tab[1]."</td><tr/>";
+		if ($data[$id][2] == "Viande")
+			echo "<tr><td>Categorie : ".$tab[2]."</td><tr/>";
+		if ($data[$id][2] == "Produits laitier")
+			echo "<tr><td>Categorie : ".$tab[3]."</td><tr/>";
 		echo "<tr><td>Poids : ".$data[$id][4]."</td><tr/>";
 		echo "<tr><td>Prix : ".$data[$id][5]."</td><tr/>";
+		echo "<tr><td>Quantité : ".$data[$id][3]."</td><tr/>";
 		echo "<tr><td><a class='voir_articles' href='add_panier.php?produit=".$data[$id][0]."'>Ajouter au panier</a></td><tr/>";
 		echo "</table>";
 		echo "</div>";

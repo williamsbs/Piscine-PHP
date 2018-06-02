@@ -60,6 +60,19 @@ div .aff_prod
     cursor: pointer;
 	text-shadow: 2px 2px 10px #000;
 }
+.admin-users1
+{
+	font-size: 20px;
+	text-decoration: none;
+    margin: 10px;
+    background-color: orange;
+	box-shadow: 2px 2px 2px #777;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+	text-shadow: 2px 2px 10px #000;
+}
 .admin-users
 {
 	font-size: 20px;
@@ -72,6 +85,10 @@ div .aff_prod
     border-radius: 9px;
     cursor: pointer;
 	text-shadow: 2px 2px 10px #000;
+}
+.admin-users1:hover {
+    border: 2px solid #000;
+	background-color: #ff5349;
 }
 .admin-users:hover {
     border: 2px solid #777;
@@ -263,11 +280,15 @@ nav li:hover .sous-menu
   color: #222538;
   width: 270px;
 }
-
+.admin:hover
+{
+  border-top: 5px solid #49c2ff;
+  background-color: RGBa(73, 194, 255, 0.15);
+}
 .panier:hover
 {
-  border-top: 5px solid #CCC;
-  background-color: RGBa(050, 070, 070, 0.15);
+  border-top: 5px solid #ffc04c;
+  background-color: RGBa(255, 165, 000, 0.15);
 }
 
 .compte:hover
@@ -298,6 +319,11 @@ nav li:hover .sous-menu
 {
   border-top: 5px solid #FFFCCC;
   background-color: RGBa(255, 252, 204, 0.15);
+}
+
+.admin .sous-menu
+{
+  background-color: RGBa(73, 194, 255, 0.95);
 }
 
 .panier .sous-menu
@@ -332,6 +358,21 @@ nav li:hover .sous-menu
 .sous-menu li:hover a
 {
   font-weight: bold;
+}
+
+.compte .sous-menu li:hover
+{
+  background-color: RGB(120, 120, 120);
+}
+
+.panier .sous-menu li:hover
+{
+  background-color: RGB(220, 165, 100);
+}
+
+.admin .sous-menu li:hover
+{
+  background-color: RGB(41, 159, 219);
 }
 
 .menu-legume .sous-menu li:hover

@@ -74,13 +74,14 @@ $data = unserialize(file_get_contents("../../private/data"));
 		  <?php
 		 if ($_SESSION["loggued_on_user"] == "admin")
 		 {
-			 echo "<li class='compte'><a href='admin.php'>Admin</a>";
+			 echo "<li class='admin'><a href='admin.php'>Admin</a>";
 			 echo "<ul class='sous-menu'>";
 			 echo "<li><a href='add_user.php'>Ajouter un utilisateur</a></li>";
 			 echo "<li><a href='modif_user.php'>Modifier un utilisateur</a></li>";
 			 echo "<li><a href='sup_user.php'>Supprimer un utilisateur</a></li>";
-			 echo "<li><a href='products.php'>Ajouter un categorie</a></li>";
-			 echo "<li><a href='sup_user.php'>Supprimer un categorie</a></li>";
+			 echo "<li><a href='products.php'>Ajouter/Modifier/Supprimer un produit</a></li>";
+			 echo "<li><a href='categories.php'>Ajouter/Modifer/Supprimer une categorie</a></li>";
+			 echo "<li><a href='historique_commande.php'>Historique des commandes</a></li>";
 			 echo "</ul></li>";
 		 }
 		 ?>

@@ -5,8 +5,6 @@ if ((isset($_POST['categorie']) && $_POST['categorie'] != NULL)&&
 {
   $ok = 0;
   $content = unserialize(file_get_contents("../../private/categorie"));
-  print_r($content[cat1]);
-  print_r ($_POST['categorie']);
   if (array_search($_POST['categorie'], $content[cat1]))
   {
     $return = array_search($_POST['categorie'], $content[cat1]);
@@ -35,6 +33,13 @@ if ((isset($_POST['categorie']) && $_POST['categorie'] != NULL)&&
   $content[cat4] = array_values($content[cat4]);
   $ok = 1;
   }
+  elseif (array_search($_POST['categorie'], $content[cat5]))
+  {
+  $return = array_search($_POST['categorie'], $content[cat5]);
+  unset($content[cat5][$return]);
+  $content[cat5] = array_values($content[cat5]);
+  $ok = 1;
+  }
 }
 else
 {
@@ -44,7 +49,7 @@ else
 echo $ok;
 if ($ok == 0)
 {
-  $_SESSION['supp_cat'] = "ko";
+  $_SESSION['supp_cat'] = 0;
   echo "<meta http-equiv='refresh' content='0,url=categories.php'>";
   exit();
 }
@@ -52,7 +57,7 @@ else if ($ok == 1)
 {
   $serialized = serialize($content);
   file_put_contents("../../private/categorie", $serialized);
-  $_SESSION['supp_cat'] = "ok";
+  $_SESSION['supp_cat'] = 1;
   echo "<meta http-equiv='refresh' content='0,url=categories.php'>";
   exit();
 }

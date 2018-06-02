@@ -29,7 +29,7 @@ include ("install.php");
 		  foreach($cat3 as $elem3){}
 		  foreach($cat4 as $elem4){}
 // ------------------------------------LEGUME-----------------------------------------------
-        echo "<li class='menu-legume'><a href='srcs/Articles.php?id=".$i."&categorie=".$data[$j][2]."'>".$elem1."</a>";
+        echo "<li class='menu-legume'><a href='srcs/Articles.php?id=".$i."&categorie=".$elem1."'>".$elem1."</a>";
          echo "<ul class='sous-menu'>";
 		while($data[$j++][2] == "Legume")
 		{
@@ -74,14 +74,15 @@ include ("install.php");
 		  <?php
 		  if ($_SESSION["loggued_on_user"] == "admin")
 		  {
-			  echo "<li class='compte'><a href='srcs/admin/admin.php'>Admin</a>";
-			  echo "<ul class='sous-menu'>";
-			  echo "<li><a href='srcs/admin/add_user.php'>Ajouter un utilisateur</a></li>";
-			  echo "<li><a href='srcs/admin/modif_user.php'>Modifier un utilisateur</a></li>";
-			  echo "<li><a href='srcs/admin/sup_user.php'>Supprimer un utilisateur</a></li>";
-			  echo "<li><a href='srcs/admin/products.php'>Ajouter un categorie</a></li>";
-			  echo "<li><a href='srcs/admin/sup_user.php'>Supprimer un categorie</a></li>";
-			  echo "</ul></li>";
+			 echo "<li class='admin'><a href='srcs/admin/admin.php'>Admin</a>";
+		 	 echo "<ul class='sous-menu'>";
+		 	 echo "<li><a href='srcs/admin/add_user.php'>Ajouter un utilisateur</a></li>";
+		 	 echo "<li><a href='srcs/admin/modif_user.php'>Modifier un utilisateur</a></li>";
+		 	 echo "<li><a href='srcs/admin/sup_user.php'>Supprimer un utilisateur</a></li>";
+		 	 echo "<li><a href='srcs/admin/products.php'>Ajouter/Modifier/Supprimer un produit</a></li>";
+		 	 echo "<li><a href='srcs/admin/categories.php'>Ajouter/Modifer/Supprimer une categorie</a></li>";
+		 	 echo "<li><a href='srcs/admin/historique_commande.php'>Historique des commandes</a></li>";
+		 	 echo "</ul></li>";
 		  }
 		  ?>
       </ul>

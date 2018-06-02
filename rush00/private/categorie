@@ -1,1 +1,1 @@
-a:4:{s:4:"cat1";a:1:{i:0;s:6:"Legume";}s:4:"cat2";a:1:{i:0;s:5:"Fruit";}s:4:"cat3";a:1:{i:0;s:6:"Viande";}s:4:"cat4";a:1:{s:16:"Produits laitier";s:16:"Produits laitier";}}
+a:4:{s:4:"cat1";a:1:{s:6:"Legume";s:6:"Legume";}s:4:"cat2";a:1:{s:5:"Fruit";s:5:"Fruit";}s:4:"cat3";a:1:{s:6:"Viande";s:6:"Viande";}s:4:"cat4";a:1:{s:16:"Produits laitier";s:16:"Produits laitier";}}
